@@ -12,8 +12,6 @@ void setup() {
 
 void loop() {
   float temp = sensor.get_temperature();
-  Serial.print("Temperature: ");
-  Serial.print(temp);
-  Serial.println(" [deg C]");
+  cdh.printf("Temperature: %.2f [deg C]\r\n", temp);
   delay(1000);
 }
